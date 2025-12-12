@@ -1,16 +1,20 @@
 /** @type {import('jest').Config} */
 module.exports = {
   displayName: 'api',
-  preset: 'ts-jest',
   testEnvironment: 'node',
   rootDir: '.',
-  testMatch: ['<rootDir>/src/**/*.test.ts'],
+  passWithNoTests: true,
+  testMatch: ['<rootDir>/src/**/*.test.ts', '<rootDir>/src/validation/**/*.test.ts'],
+  setupFilesAfterEnv: ['<rootDir>/src/validation/setup.ts'],
   moduleFileExtensions: ['ts', 'js', 'json'],
+  extensionsToTreatAsEsm: [],
   transform: {
-    '^.+\\.ts$': [
+    '^.+\\.tsx?$': [
       'ts-jest',
       {
+        useESM: false,
         tsconfig: '<rootDir>/tsconfig.json',
+        isolatedModules: true,
       },
     ],
   },

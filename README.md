@@ -56,18 +56,30 @@ pnpm --filter web dev
 pnpm dev
 ```
 
+***Note: Make Sure To Only Run One Instance***
+
 ## Testing
 
+The API includes comprehensive integration tests located in `apps/api/src/validation/`.
+
 ```bash
-# Run all tests
-pnpm test
-
-# Run tests with coverage
-pnpm test:coverage
-
-# Run specific package tests
+# Run API tests
 pnpm --filter api test
-pnpm --filter web test
+
+# Run all workspace tests (from root)
+pnpm test
+```
+
+### Test Structure
+
+```
+apps/api/src/validation/
+├── setup.ts              # Jest setup - clears data before each test
+├── fixtures/
+│   └── index.ts          # Test data fixtures
+├── categories.test.ts    # Category API endpoint tests
+├── todos.test.ts         # Todo API endpoint tests
+└── health.test.ts        # Health check endpoint tests
 ```
 
 ## Building

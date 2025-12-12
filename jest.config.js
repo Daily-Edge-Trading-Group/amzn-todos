@@ -6,6 +6,7 @@ module.exports = {
     '<rootDir>/libs/contracts',
     '<rootDir>/libs/guards',
   ],
+  passWithNoTests: true,
   collectCoverageFrom: [
     '**/*.{ts,tsx}',
     '!**/*.d.ts',
