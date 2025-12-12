@@ -1,0 +1,19 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "declaration": false,
+    "declarationMap": false,
+    "module": "CommonJS",
+    "moduleResolution": "Node",
+    "paths": {
+      "@todo-app/contracts": ["../../libs/contracts/src"],
+      "@todo-app/contracts/*": ["../../libs/contracts/src/*"],
+      "@todo-app/guards": ["../../libs/guards/src"],
+      "@todo-app/guards/*": ["../../libs/guards/src/*"]
+    }
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist", "**/*.test.ts"]
+}

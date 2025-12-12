@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "lib": ["ES2022"],
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "paths": {
+      "@todo-app/contracts": ["./libs/contracts/src"],
+      "@todo-app/guards": ["./libs/guards/src"],
+      "@contracts/*": ["./libs/contracts/src/*"],
+      "@guards/*": ["./libs/guards/src/*"]
+    },
+    "baseUrl": "."
+  },
+  "exclude": ["node_modules", "dist", "build", "coverage"]
+}
